@@ -1,0 +1,15 @@
+@import "../../scss/variable";
+@import "../../scss/theme";
+
+.footer-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $surface-subdued;
+
+  .footer-inner {
+    padding: 1rem $body-padding;
+    max-width: $body-width;
+  }
+}

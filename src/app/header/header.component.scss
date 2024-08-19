@@ -1,0 +1,39 @@
+@import "../../scss/variable";
+@import "../../scss/theme";
+
+.header-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  background: $header-surface-alt; //fallback background for firefox
+  background: $header-surface;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  .header-inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem $body-padding;
+    max-width: $body-width;
+
+    .nav-container {
+      display: flex;
+      justify-content: end;
+
+      ul {
+        display: flex;
+        gap: 3rem;
+        margin: 0;
+        padding: 0;
+
+        li {
+          list-style: none;
+        }
+      }
+    }
+  }
+}
