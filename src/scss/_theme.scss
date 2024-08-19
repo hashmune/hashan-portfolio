@@ -1,9 +1,18 @@
 // color style tokens 
-$text-primary: #333333;
-$text-secondary: #777777;
+$text-default: #252329;
+$text-subdued: #736D7A;
 
-$surface-primary: #F0FFFF;
-$surface-subdued: #FFFFFF;
+$surface-default: #FFFFFF;
+$surface-subdued: #F6F8F9;
 
 $header-surface-alt: #FFFFFF;
-$header-surface: rgba(255, 255, 255, 0.9);
+$header-surface: rgba(255, 255, 255, 0.75);
+
+$brand-dark: #29262F;
+$brand-default: #463857;
+$brand-light: #F0EAFE; 
+
+// border colors
+$border-default: #DBE1E7;
+$border-decorative: #AAA8BD;
+$border-decorative--hover: #9A98B1;

@@ -2,14 +2,13 @@
 @import "../scss/theme";
 
 .body-container {
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  background: $surface-subdued;
 
   .body-inner {
+    min-height: 100vh;
     max-width: $body-width;
     padding: 1rem $body-padding;
   }
@@ -27,6 +26,7 @@
 
 .content p {
   margin-top: 1.5rem;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 650px) {

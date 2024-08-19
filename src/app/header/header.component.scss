@@ -2,7 +2,6 @@
 @import "../../scss/theme";
 
 .header-container {
-  width: 100vw;
   display: flex;
   justify-content: center;
   position: sticky;
@@ -11,6 +10,7 @@
   background: $header-surface;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  z-index: 1;
 
   .header-inner {
     width: 100%;

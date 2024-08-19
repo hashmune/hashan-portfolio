@@ -2,14 +2,46 @@
 @import "../../scss/theme";
 
 .footer-container {
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $surface-subdued;
+  border-top: 1px solid $border-default;
 
   .footer-inner {
-    padding: 1rem $body-padding;
+    padding: 2rem $body-padding;
     max-width: $body-width;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer-left {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      span {
+        height: 18px;
+        width: 1px;
+        background: $text-subdued;
+        border-radius: 4px;
+      }
+    }
+
+    .footer-right {
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 2.5rem;
+
+        li {
+          list-style: none;
+        }
+      }
+      i {
+        font-size: 1.5rem;
+      }
+    }
   }
 }

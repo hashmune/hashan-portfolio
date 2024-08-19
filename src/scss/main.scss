@@ -5,33 +5,53 @@
 body {
   font-family: "Manrope", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  color: $text-secondary;
+  color: $text-subdued;
   display: flex;
   justify-content: center;
   margin: 0;
-  background: $surface-primary;
+  background: $surface-default;
 }
 
 h1 {
   font-size: 3.125rem;
-  color: $text-primary;
+  color: $text-default;
   font-weight: 500;
   line-height: 100%;
-  letter-spacing: -0.125rem;
+  letter-spacing: -0.025rem;
   margin: 0;
 }
 
 p {
   margin: 0;
-  color: $text-secondary;
+  color: $text-subdued;
 }
 
 a {
     text-decoration: none;
-    color: $text-primary;
+    color: $text-default;
     font-weight: 600;
 
     &:hover {
         text-decoration: underline;
     }
+}
+
+// custom scroll bar 
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $border-decorative;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $border-decorative--hover;
 }
