@@ -7,12 +7,23 @@
       <ul>
         <li><a href="#">Projects</a></li>
         <li><a href="#">About me</a></li>
-        <li>
-          <a href="https://drive.google.com/uc?export=download&id=1NSxqYz637ZeGbBWJNDmRrlAxS-JoDgxS">
-            Download resume
-          </a>
-        </li>
+        <li><a href="#">Download resume</a></li>
       </ul>
     </nav>
+    <div class="nav-container--mobile">
+      <i class="ph-bold ph-list" (click)="toggleMobileMenu()"></i>
+    </div>
   </div>
 </header>
+
+<!-- mobile navigation menu  -->
+<nav class="mobile-menu" [ngClass]="{ 'show-menu' : isMobileMenuActive }">
+  <div>
+    <i class="ph-bold ph-x" (click)="toggleMobileMenu()"></i>
+  </div>
+  <ul>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">About me</a></li>
+    <li><a href="#">Download resume</a></li>
+  </ul>
+</nav>

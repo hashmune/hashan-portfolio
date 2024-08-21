@@ -14,17 +14,27 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 650px) {
+      padding: 1rem $body-padding--mobile;
+      gap: 0.75rem;
+    }
 
     .footer-left {
       display: flex;
       gap: 0.5rem;
       align-items: center;
+      @media screen and (max-width: 650px) {
+        gap: 0.25rem;
+      }
 
       span {
         height: 18px;
         width: 1px;
         background: $text-subdued;
         border-radius: 4px;
+        @media screen and (max-width: 650px) {
+          display: none;
+        }
       }
     }
 
@@ -50,16 +60,5 @@
   .footer-inner,
   .footer-left {
     flex-direction: column;
-    span {
-      display: none;
-    }
-  }
-
-  .footer-left {
-    gap: 0.25rem;
-  }
-
-  .footer-inner {
-    gap: 1rem;
   }
 }
