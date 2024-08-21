@@ -45,3 +45,21 @@
     }
   }
 }
+
+@media only screen and (max-width: 650px) {
+  .footer-inner,
+  .footer-left {
+    flex-direction: column;
+    span {
+      display: none;
+    }
+  }
+
+  .footer-left {
+    gap: 0.25rem;
+  }
+
+  .footer-inner {
+    gap: 1rem;
+  }
+}

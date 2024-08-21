@@ -32,6 +32,12 @@
 @media screen and (max-width: 650px) {
   .content {
     flex-direction: column;
-    width: max-content;
+    width: 100%;
+    & h1 {
+      font-size: 1.5rem;
+    }
+    & p {
+      font-size: 1rem;
+    }
   }
 }
