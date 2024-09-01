@@ -3,6 +3,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,14 @@ import { HomeComponent } from './home/home.component';
     <app-footer></app-footer>
   `,
   standalone: true,
-  imports: [RouterOutlet, RouterLink, HeaderComponent, FooterComponent, HomeComponent],
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    ProjectsComponent,
+  ],
   styleUrl: './app.component.scss',
 })
 export class AppComponent {}
