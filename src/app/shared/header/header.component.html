@@ -28,13 +28,38 @@
     <i class="ph-bold ph-x" (click)="toggleMobileMenu()"></i>
   </div>
   <ul>
-    <li><a routerLink="/" routerLinkActive="link-active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
     <li>
-      <a routerLink="/projects" routerLinkActive="link-active">Projects</a>
+      <a
+        (click)="closeMobileMenu()"
+        routerLink="/"
+        routerLinkActive="link-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
     </li>
     <li>
-      <a routerLink="/about-me" routerLinkActive="link-active">About me</a>
+      <a
+        (click)="closeMobileMenu()"
+        routerLink="/projects"
+        routerLinkActive="link-active"
+        >Projects</a
+      >
     </li>
-    <li><a href="#" routerLinkActive="link-active">Download resume</a></li>
+    <li>
+      <a
+        (click)="closeMobileMenu()"
+        routerLink="/about-me"
+        routerLinkActive="link-active"
+        >About me</a
+      >
+    </li>
+    <li>
+      <a 
+        (click)="closeMobileMenu()" 
+        href="#" 
+        routerLinkActive="link-active"
+        >Download resume</a
+      >
+    </li>
   </ul>
 </nav>

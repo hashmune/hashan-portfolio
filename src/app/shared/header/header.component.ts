@@ -15,4 +15,8 @@ export class HeaderComponent {
   toggleMobileMenu(): void {
     this.isMobileMenuActive = !this.isMobileMenuActive;
   }
+
+  closeMobileMenu(): void {
+    this.isMobileMenuActive = false;
+  }
 }
