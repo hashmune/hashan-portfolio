@@ -46,6 +46,11 @@
 
         li {
           list-style: none;
+
+          a {
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+          }
         }
       }
 
@@ -64,8 +69,7 @@
 
 .link-active {
   color: $brand-default;
-  font-weight: 700;
-  text-decoration: underline;
+  background: $brand-light;
 }
 
 @media screen and (max-width: 650px) {
@@ -116,6 +120,10 @@
 
     li {
       list-style: none;
+      a {
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+      }
     }
   }
 
