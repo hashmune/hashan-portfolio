@@ -1,12 +1,14 @@
 <header class="header-container">
   <div class="header-inner">
     <div class="logo-container">
-      <img src="site-logo.svg" alt="Site logo" />
+      <a routerLink="/">
+        <img src="site-logo.svg" alt="Site logo" />
+      </a>
     </div>
     <nav class="nav-container">
       <ul>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About me</a></li>
+        <li><a routerLink="/projects">Projects</a></li>
+        <li><a routerLink="/about-me">About me</a></li>
         <li><a href="#">Download resume</a></li>
       </ul>
     </nav>
