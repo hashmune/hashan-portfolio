@@ -1,4 +1,8 @@
-@import "../src/scss/main.scss";
+@import "scss/main.scss";
+
+// primeNG style import
+@import "primeng/resources/themes/aura-light-noir/theme.css";
+@import "primeng/resources/primeng.css";
 
 html,
 body {
@@ -12,5 +16,5 @@ app-root {
   position: relative;
   display: block;
   width: 100%;
-  min-height: 100vh; // making the app full height of viewport
+  min-height: 100vh;
 }

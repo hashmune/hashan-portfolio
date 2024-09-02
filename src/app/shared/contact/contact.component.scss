@@ -1,0 +1,11 @@
+@import "../../../scss/theme";
+
+.contact-container {
+  position: sticky;
+  bottom: 0;
+
+  div {
+    color: $text-default;
+    margin: 1rem 0;
+  }
+}

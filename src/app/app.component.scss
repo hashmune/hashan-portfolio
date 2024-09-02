@@ -8,8 +8,6 @@
   position: relative;
 
   .body-inner {
-    // min-height: calc(100vh - 200px); //this is the correct height
-    min-height: 100vh; // only for testing
     max-width: $body-width;
     padding: 1rem $body-padding;
     @media screen and (max-width: 650px) {

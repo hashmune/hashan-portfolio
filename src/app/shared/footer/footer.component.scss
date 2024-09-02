@@ -5,13 +5,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid $border-default;
 
   .footer-inner {
+    border-top: 1px solid $border-dark;
     padding: 2rem $body-padding;
     max-width: $body-width;
-    display: flex;
     width: 100%;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     @media screen and (max-width: 650px) {

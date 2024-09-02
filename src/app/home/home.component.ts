@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { ProjectsComponent } from '../projects/projects.component';
+import { ContactComponent } from '../shared/contact/contact.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProjectsComponent],
+  imports: [
+    ProjectsComponent, 
+    ContactComponent,
+  ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
-
 export class HomeComponent {
-  title = '👋 Hello...';
-  myName = 'Hashan Nilupul';
+  title = 'Hi';
+  myName = 'Hashan';
 }
