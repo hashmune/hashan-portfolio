@@ -11,4 +11,13 @@ import { ButtonModule } from 'primeng/button';
 export class ContactComponent {
   emoji = '👋';
   email = 'hashan.nilupul@live.com';
+
+  openEmailClient() {
+    const predefinedEmail = this.email;
+    const subject = 'Project collaboration inquiry'; 
+    const body = 'Hello Hashan...';
+
+    const mailtoLink = `mailto:${predefinedEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+  }
 }

@@ -7,7 +7,6 @@
   align-items: center;
 
   .footer-inner {
-    border-top: 1px solid $border-dark;
     padding: 2rem $body-padding;
     max-width: $body-width;
     width: 100%;
@@ -36,6 +35,10 @@
           display: none;
         }
       }
+
+      .copyright {
+        cursor: pointer;
+      }
     }
 
     .footer-right {
@@ -54,11 +57,28 @@
       }
     }
   }
+  .separation-line {
+    height: 2px;
+    border-radius: 2px;
+    background-color: $border-decorative;
+  }
+}
+
+.width-1024 {
+  max-width: 1024px;
 }
 
 @media only screen and (max-width: 650px) {
   .footer-inner,
   .footer-left {
     flex-direction: column;
+  }
+}
+
+:host::ng-deep {
+  .copyright {
+    button {
+      padding: 0 !important;
+    }
   }
 }

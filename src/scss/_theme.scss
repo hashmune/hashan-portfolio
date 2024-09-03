@@ -1,9 +1,16 @@
+// color palette
+$white: #FFFFFF;
+$black: #0f0f0f;
+
 // color style tokens 
 $text-default: #252329;
 $text-subdued: #736D7A;
+$text-invert: #FFFFFF;
 
 $surface-default: #FFFFFF;
 $surface-subdued: #F6F8F9;
+
+$card-surface-hover: rgba(102, 77, 133, 0.75);
 
 $header-surface-alt: #FFFFFF;
 $header-surface: rgba(255, 255, 255, 0.75);
@@ -13,7 +20,7 @@ $brand-default: #463857;
 $brand-light: #F0EAFE; 
 
 // border colors
-$border-dark: $brand-dark;
+$border-dark: $brand-default;
 $border-default: #DBE1E7;
 $border-decorative: #AAA8BD;
 $border-decorative--hover: #9A98B1;

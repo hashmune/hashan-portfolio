@@ -1,0 +1,9 @@
+@import "../../scss/theme";
+
+.section-title {
+    color: $text-default;
+}
+
+.cards-container + * {
+    width: 50%;
+}

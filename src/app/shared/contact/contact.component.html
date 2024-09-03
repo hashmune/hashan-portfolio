@@ -1,5 +1,10 @@
-<div class="contact-container">
-  <p class="text-semi-bold text-small">{{ emoji }} Get in touch at</p>
-  <div class="text-extra-bold text-medium">{{ email }}</div>
-  <p-button label="Contact me" [rounded]="true" />
+<div class="contact-container my-3">
+  <p class="fw-bold text-small">{{ emoji }} Get in touch at</p>
+  <div class="fw-black text-medium">{{ email }}</div>
+  <p-button 
+    label="Contact me" 
+    [rounded]="true" 
+    (click)="openEmailClient()"
+    icon="ph-bold ph-paper-plane-tilt"
+  />
 </div>

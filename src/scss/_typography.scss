@@ -11,7 +11,7 @@
 // typography style tokens
 
 .text-2X-large {
-  font-size: 8rem !important;
+  font-size: 6rem !important;
   letter-spacing: 0.04rem !important;
 }
 
@@ -41,19 +41,26 @@
 }
 
 // font weigh styles
+.fw-light {
+  font-weight: 300 !important;
+}
 
-.text-normal {
+.fw-normal {
   font-weight: 400 !important;
 }
 
-.text-semi-bold {
+.fw-semi-bold {
   font-weight: 500 !important;
 }
 
-.text-bold {
+.fw-bold {
   font-weight: 600 !important;
 }
 
-.text-extra-bold {
+.fw-extra-bold {
   font-weight: 700 !important;
+}
+
+.fw-black {
+  font-weight: 800 !important;
 }
