@@ -3,7 +3,8 @@
 .contact-container {
   position: sticky;
   bottom: 0;
-  
+  word-wrap: break-word;
+
   div {
     color: $text-default;
     margin: 1rem 0;

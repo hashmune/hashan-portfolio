@@ -1,9 +1,18 @@
 @import "../../scss/theme";
 
 .section-title {
-    color: $text-default;
+  color: $text-default;
 }
 
 .cards-container + * {
-    width: 50%;
+  width: 50%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .cards-container {
+    justify-content: center;
+    & + * {
+      width: 100%;
+    }
+  }
 }
