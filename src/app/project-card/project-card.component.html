@@ -1,15 +1,11 @@
 <div class="project-card flex flex-column justify-content-around gap-2">
   <div class="image-container">
-    <img src="sample-image.png" alt="Project image" />
+    <img [src]="imageSrc" alt="Project image" />
   </div>
-  <div class="card-title fw-bold text-medium">Odd Sox</div>
-  <div class="card-description fw-normal text-regular">
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris
-  </div>
+  <div class="card-title">{{ title }}</div>
+  <div class="card-description ">{{ description }}</div>
   <div class="card-hover gap-3">
-    <p class="text-regular fw-medium">View project</p>
-    <i class="text-medium ph-duotone ph-arrow-circle-right"></i>
+    <p class="">View project</p>
+    <i class="ph-duotone ph-arrow-circle-right"></i>
   </div>
 </div>

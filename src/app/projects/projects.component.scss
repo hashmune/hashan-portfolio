@@ -1,6 +1,8 @@
 @import "../../scss/theme";
+@import "../../scss/typography";
 
 .section-title {
+  @include text-l-extrabold;
   color: $text-default;
 }
 

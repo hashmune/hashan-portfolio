@@ -1,4 +1,5 @@
 @import "../../scss/theme";
+@import "../../scss/typography";
 
 .content {
   display: flex;
@@ -11,23 +12,22 @@
 }
 
 .content h1 {
+  @include text-2x-extrabold;
   color: $text-default;
   line-height: 100%;
   margin: 3rem 0;
-  @media screen and (max-width: 650px) {
-    font-size: 4rem !important;
-  }
 }
 
 .content p {
+  @include text-m-medium;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   color: $text-subdued;
   margin-top: 2rem;
-  font-size: 1.5rem;
   a {
     color: $text-default;
     font-weight: 500;
   }
   @media screen and (max-width: 650px) {
-    font-size: 1rem;
+    @include text-r-medium;
   }
 }

@@ -1,4 +1,5 @@
 @import "../../scss/theme";
+@import "../../scss/typography";
 
 .project-card {
   max-width: 480px;
@@ -26,10 +27,12 @@
     }
   }
   .card-title {
+    @include text-m-bold;
     width: 100%;
     color: $text-default;
   }
   .card-description {
+    @include text-r-regular;
     width: 100%;
     color: $text-subdued;
     display: -webkit-box;
@@ -54,6 +57,14 @@
   backdrop-filter: blur(10px);
   opacity: 0;
   transition: visibility 0ms, opacity 300ms linear;
+
+  p {
+    @include text-r-medium;
+  }
+
+  i {
+    @include text-m-regular;
+  }
 
   p,
   i {

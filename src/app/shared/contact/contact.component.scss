@@ -1,4 +1,5 @@
 @import "../../../scss/theme";
+@import "../../../scss/typography";
 
 .contact-container {
   position: sticky;
@@ -6,7 +7,12 @@
   word-wrap: break-word;
 
   div {
+    @include text-m-extrabold;
     color: $text-default;
     margin: 1rem 0;
+  }
+
+  p {
+    @include text-s-bold;
   }
 }

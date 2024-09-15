@@ -1,3 +1,5 @@
+@import "../scss/theme";
+
 // main font face
 
 @font-face {
@@ -8,59 +10,196 @@
   font-weight: 200 800;
 }
 
-// typography style tokens
+// typography variables
 
-.text-2X-large {
-  font-size: 6rem !important;
-  letter-spacing: 0.04rem !important;
+$font-size-2xl: 6rem;
+$font-size-xl: 4rem;
+$font-size-l: 2.625rem;
+$font-size-m: 2rem;
+$font-size-r: 1.25rem;
+$font-size-s: 1rem;
+$font-size-xs: 0.75rem;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+$font-weight-extrabold: 800;
+
+$letter-spacing-2x:  0.04rem;
+$letter-spacing-xl: 0.025rem;
+
+
+// typography mixins
+
+// 2 extra large 
+
+@mixin text-2x-regular {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-normal;
+  font-size: clamp(3rem, 5vw, 6rem);
+  letter-spacing: $letter-spacing-2x;
 }
 
-.text-1X-large {
-  font-size: 4rem !important;
-  letter-spacing: 0.025rem !important;
-} 
-
-.text-large {
-  font-size: 2.625rem !important;
+@mixin text-2x-medium {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-medium;
+  font-size: clamp(3rem, 5vw, 6rem);
+  letter-spacing: $letter-spacing-2x;
 }
 
-.text-medium {
-  font-size: 2rem !important;
+@mixin text-2x-bold {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  font-size: clamp(3rem, 5vw, 6rem);
+  letter-spacing: $letter-spacing-2x;
 }
 
-.text-regular {
-  font-size: 1.25rem !important;
+@mixin text-2x-extrabold {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-extrabold;
+  font-size: clamp(3rem, 5vw, 6rem);
+  letter-spacing: $letter-spacing-2x;
 }
 
-.text-small {
-  font-size: 1rem !important;
+// extra large 
+
+@mixin text-xl-regular {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-normal;
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: $letter-spacing-xl;
 }
 
-.text-1X-small {
-  font-size: 0.75rem !important;
+@mixin text-xl-medium {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-medium;
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: $letter-spacing-xl;
 }
 
-// font weigh styles
-.fw-light {
-  font-weight: 300 !important;
+@mixin text-xl-bold {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: $letter-spacing-xl;
 }
 
-.fw-normal {
-  font-weight: 400 !important;
+@mixin text-xl-extrabold {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-extrabold;
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: $letter-spacing-xl;
 }
 
-.fw-semi-bold {
-  font-weight: 500 !important;
+// large
+
+@mixin text-l-regular {
+  font-size: $font-size-l;
+  font-weight: $font-weight-normal;
+  font-size: clamp(1rem, 5vw, 2rem);
 }
 
-.fw-bold {
-  font-weight: 600 !important;
+@mixin text-l-medium {
+  font-size: $font-size-l;
+  font-weight: $font-weight-medium;
+  font-size: clamp(1rem, 5vw, 2rem);
 }
 
-.fw-extra-bold {
-  font-weight: 700 !important;
+@mixin text-l-bold {
+  font-size: $font-size-l;
+  font-weight: $font-weight-bold;
+  font-size: clamp(1rem, 5vw, 2rem);
 }
 
-.fw-black {
-  font-weight: 800 !important;
+@mixin text-l-extrabold {
+  font-size: $font-size-l;
+  font-weight: $font-weight-extrabold;
+}
+
+// medium 
+
+@mixin text-m-regular {
+  font-size: $font-size-m;
+  font-weight: $font-weight-normal;
+}
+
+@mixin text-m-medium {
+  font-size: $font-size-m;
+  font-weight: $font-weight-medium;
+}
+
+@mixin text-m-bold {
+  font-size: $font-size-m;
+  font-weight: $font-weight-bold;
+}
+
+@mixin text-m-extrabold {
+  font-size: $font-size-m;
+  font-weight: $font-weight-extrabold;
+}
+
+// regular
+
+@mixin text-r-regular {
+  font-size: $font-size-r;
+  font-weight: $font-weight-normal;
+}
+
+@mixin text-r-medium {
+  font-size: $font-size-r;
+  font-weight: $font-weight-medium;
+}
+
+@mixin text-r-bold {
+  font-size: $font-size-r;
+  font-weight: $font-weight-bold;
+}
+
+@mixin text-r-extrabold {
+  font-size: $font-size-r;
+  font-weight: $font-weight-extrabold;
+}
+
+// small
+
+@mixin text-s-regular {
+  font-size: $font-size-s;
+  font-weight: $font-weight-normal;
+}
+
+@mixin text-s-medium {
+  font-size: $font-size-s;
+  font-weight: $font-weight-medium;
+}
+
+@mixin text-s-bold {
+  font-size: $font-size-s;
+  font-weight: $font-weight-bold;
+}
+
+@mixin text-s-extrabold {
+  font-size: $font-size-s;
+  font-weight: $font-weight-extrabold;
+}
+
+// extra small 
+
+@mixin text-xs-regular {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-normal;
+}
+
+@mixin text-xs-medium {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+}
+
+@mixin text-xs-bold {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+}
+
+@mixin text-xs-extrabold {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-extrabold;
 }
