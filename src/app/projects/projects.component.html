@@ -2,6 +2,7 @@
 <div class="cards-container flex flex-wrap gap-5">
     @for (project of projects; track project.id) {
         <app-project-card 
+          class="project-card"
           [imageSrc]="project.imageSrc"
           [title]="project.title"
           [description]="project.description">

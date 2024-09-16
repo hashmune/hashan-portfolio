@@ -1,6 +1,11 @@
 @import "../../scss/theme";
 @import "../../scss/typography";
 
+.project-card {
+  flex-grow: 1;
+  max-width: calc(50% - 16px);
+}
+
 .section-title {
   @include text-l-extrabold;
   color: $text-default;
