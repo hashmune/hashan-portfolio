@@ -1,13 +1,9 @@
 @import "../../../scss/theme";
 @import "../../../scss/typography";
 
+// project cover background gradient 
+
 .project-cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 420px;
-  z-index: -1;
   background: hsla(78, 82%, 66%, 1);
   background: -moz-linear-gradient(
     315deg,
@@ -24,43 +20,13 @@
     hsla(78, 82%, 66%, 1) 0%,
     hsla(79, 51%, 44%, 1) 100%
   );
-  @media only screen and (max-width: 650px) {
-    height: 270px;
-  }
 }
 
-.details-left {
-  max-width: 500px;
-  color: $text-invert;
-  @media only screen and (max-width: 650px) {
-    margin-top: 1.5rem;
-  }
+// add margin-top dynamically
 
-  .project-title {
-    @include text-l-extrabold;
-  }
-
-  .project-sub-title {
-    @include text-r-regular;
-  }
+.project-details-container {
 }
 
-.project-img {
-  height: 340px;
-  @media only screen and (max-width: 650px) {
-    display: none;
-  }
-
-  img {
-    object-fit: contain;
-    height: 100%;
-    width: 100%;
-  }
-}
-
-.section-title {
-    @include text-m-extrabold
-}
 
 // deep angular styling
 
