@@ -1,0 +1,58 @@
+@import "theme";
+@import "typography";
+
+// common project details pages styles here
+
+.project-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  &--inner {
+    height: 100%;
+    width: 1024px;
+    padding: 1rem $body-padding;
+    @media only screen and (max-width: 650px) {
+        padding: 1rem $body-padding--mobile;
+    }
+  }
+}
+
+.details-left {
+  max-width: 50%;
+  color: $text-invert;
+  @media only screen and (max-width: 650px) {
+    max-width: 100%;
+  }
+
+  .project-title {
+    @include text-l-extrabold;
+  }
+
+  .project-sub-title {
+    @include text-r-regular;
+  }
+}
+
+.project-img {
+  height: 340px;
+  @media only screen and (max-width: 650px) {
+    display: none;
+  }
+
+  img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.project-details-container {
+  transition: margin-top 0.3s ease;
+  .section-title {
+    @include text-m-extrabold;
+  }
+}
