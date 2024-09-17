@@ -1,0 +1,55 @@
+@import "../../../scss/theme";
+@import "../../../scss/typography";
+
+// project cover background gradient 
+
+.project-cover {
+  background: hsla(78, 82%, 66%, 1);
+  background: -moz-linear-gradient(
+    315deg,
+    hsla(78, 82%, 66%, 1) 0%,
+    hsla(79, 51%, 44%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    315deg,
+    hsla(78, 82%, 66%, 1) 0%,
+    hsla(79, 51%, 44%, 1) 100%
+  );
+  background: linear-gradient(
+    315deg,
+    hsla(78, 82%, 66%, 1) 0%,
+    hsla(79, 51%, 44%, 1) 100%
+  );
+}
+
+// add margin-top dynamically
+
+.project-details-container {
+}
+
+
+// deep angular styling
+
+:host::ng-deep {
+  .p-button {
+    background: rgba($color: $surface-default, $alpha: 0.3);
+    border: none;
+    &.p-button-link:not(:disabled) {
+      &:hover {
+        .p-button-label {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep {
+  .header-container {
+    display: none !important;
+  }
+
+  .body-container {
+    margin-top: 0 !important;
+  }
+}

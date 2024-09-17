@@ -1,6 +1,7 @@
-@import "_theme";
-@import "_typography";
-@import "_variable";
+@import "theme";
+@import "typography";
+@import "variable";
+@import "project-details";
 
 body {
   font-family: "Manrope", Arial, Helvetica, sans-serif;
@@ -38,7 +39,7 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: transparent;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
