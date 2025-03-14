@@ -1,0 +1,48 @@
+@import "../../../scss/theme";
+@import "../../../scss/typography";
+
+.section-title {
+  @include text-l-extrabold;
+  color: $text-default;
+}
+
+.image-container {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.feedback-column-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .feedback-container {
+    &--1 {
+      background-color: #d2e8c8;
+      color: #709955;
+    }
+    &--2 {
+      background-color: #e5dbeb;
+      color: #aa8cb8;
+    }
+    &--3 {
+      background-color: #dce4ea;
+      color: #88a3b5;
+    }
+    &--4 {
+      background-color: #fae4d0;
+      color: #c28951;
+    }
+  }
+}
