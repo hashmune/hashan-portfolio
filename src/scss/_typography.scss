@@ -25,13 +25,12 @@ $font-weight-medium: 500;
 $font-weight-bold: 600;
 $font-weight-extrabold: 800;
 
-$letter-spacing-2x:  0.04rem;
+$letter-spacing-2x: 0.04rem;
 $letter-spacing-xl: 0.025rem;
-
 
 // typography mixins
 
-// 2 extra large 
+// 2 extra large
 
 @mixin text-2x-regular {
   font-size: $font-size-2xl;
@@ -61,7 +60,7 @@ $letter-spacing-xl: 0.025rem;
   letter-spacing: $letter-spacing-2x;
 }
 
-// extra large 
+// extra large
 
 @mixin text-xl-regular {
   font-size: $font-size-xl;
@@ -116,7 +115,7 @@ $letter-spacing-xl: 0.025rem;
   font-weight: $font-weight-extrabold;
 }
 
-// medium 
+// medium
 
 @mixin text-m-regular {
   font-size: $font-size-m;
@@ -182,7 +181,7 @@ $letter-spacing-xl: 0.025rem;
   font-weight: $font-weight-extrabold;
 }
 
-// extra small 
+// extra small
 
 @mixin text-xs-regular {
   font-size: $font-size-xs;
@@ -202,4 +201,22 @@ $letter-spacing-xl: 0.025rem;
 @mixin text-xs-extrabold {
   font-size: $font-size-xs;
   font-weight: $font-weight-extrabold;
+}
+
+// Icon sizes
+
+.icon-sm {
+  font-size: 1rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.icon-lg {
+  font-size: 2rem;
+}
+
+.icon-xl {
+  font-size: 3rem;
 }
