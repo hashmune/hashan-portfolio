@@ -1,0 +1,7 @@
+{
+  "printWidth": 100,
+  "proseWrap": "never",
+  "htmlWhitespaceSensitivity": "ignore",
+  "bracketSameLine": true,
+  "singleQuote": false
+}

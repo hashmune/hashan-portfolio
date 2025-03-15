@@ -11,12 +11,18 @@
       opacity: 1;
     }
   }
+
   @media screen and (max-width: 650px) {
     max-width: none;
   }
+
   .image-container {
     height: 400px;
     width: 100%;
+
+    @media screen and (max-width: 650px) {
+      height: 280px; 
+    }
 
     img {
       width: 100%;
@@ -25,11 +31,13 @@
       border-radius: 0.5rem 0.5rem 0 0;
     }
   }
+
   .card-title {
     @include text-m-bold;
     width: 100%;
     color: $text-default;
   }
+
   .card-description {
     @include text-r-regular;
     width: 100%;
