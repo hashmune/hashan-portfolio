@@ -1,12 +1,12 @@
-import { Component, Renderer2, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { ProjectsComponent } from './projects/projects.component';
+import { Component, Renderer2, ElementRef, AfterViewInit, OnDestroy } from "@angular/core";
+import { RouterLink, RouterOutlet } from "@angular/router";
+import { HeaderComponent } from "./shared/header/header.component";
+import { FooterComponent } from "./shared/footer/footer.component";
+import { HomeComponent } from "./home/home.component";
+import { ProjectsComponent } from "./projects/projects.component";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `
     <app-header></app-header>
     <main class="body-container">
@@ -17,15 +17,8 @@ import { ProjectsComponent } from './projects/projects.component';
     <app-footer></app-footer>
   `,
   standalone: true,
-  imports: [
-    RouterOutlet,
-    RouterLink,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    ProjectsComponent,
-  ],
-  styleUrl: './app.component.scss',
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  styleUrl: "./app.component.scss",
 })
 export class AppComponent implements AfterViewInit, OnDestroy {
   private mobileMenu: HTMLElement | null = null;
@@ -36,7 +29,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    this.mobileMenu = this.elRef.nativeElement.querySelector('.mobile-menu');
+    this.mobileMenu = this.elRef.nativeElement.querySelector(".mobile-menu");
     if (this.mobileMenu) {
       this.mobileMenuObserver.observe(this.mobileMenu, { attributes: true });
     }
@@ -47,10 +40,10 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   }
 
   checkMenuStatus() {
-    if (this.mobileMenu?.classList.contains('show-menu')) {
-      this.renderer.addClass(this.elRef.nativeElement, 'overflow-hidden');
+    if (this.mobileMenu?.classList.contains("show-menu")) {
+      this.renderer.addClass(this.elRef.nativeElement, "overflow-hidden");
     } else {
-      this.renderer.removeClass(this.elRef.nativeElement, 'overflow-hidden');
+      this.renderer.removeClass(this.elRef.nativeElement, "overflow-hidden");
     }
   }
 }
