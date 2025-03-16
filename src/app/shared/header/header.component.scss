@@ -54,6 +54,11 @@
           a {
             padding: 0.5rem 1rem;
             border-radius: 1rem;
+
+            &:hover {
+              color: $default-hover;
+              text-decoration: underline;
+            }
           }
         }
       }

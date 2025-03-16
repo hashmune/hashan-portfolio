@@ -4,16 +4,14 @@
       label="Go back"
       [rounded]="true"
       icon="ph ph-arrow-left"
-      (onClick)="goBack()"
-    >
-    </p-button>
-
+      styleClass="back-button"
+      (onClick)="goBack()" />
     <div class="flex justify-content-between align-items-center">
       <div class="details-left">
         <h1 class="project-title">Revamping Elveguiden</h1>
         <h3 class="project-sub-title">
-          This case-study showcase how we improved Elveguiden beat search
-          experience and revamping UI for overall better experience
+          This case-study showcase how we improved Elveguiden beat search experience and revamping
+          UI for overall better experience
         </h3>
       </div>
       <div class="project-img">
@@ -23,11 +21,61 @@
   </div>
 </div>
 
-<div #details class="project-details-container">
-  <div class="section-title">Project overview</div>
-  <div class="section-title">Research strategy</div>
-  <div class="section-title">User interviews</div>
-  <div class="section-title">Information architecture</div>
-  <div class="section-title">Low fidelity prototype</div>
-  <div class="section-title">High fidelity prototype</div>
+<div #details class="project-details-container flex w-full justify-content-center">
+  <div class="flex py-8">
+    <div
+      class="temp-card flex flex-column text-center md:text-left md:flex-row gap-3 p-3 border-round-xl">
+      <img src="wip.svg" class="w-10rem h-10rem" alt="Work in progress" />
+      <div class="flex flex-column gap-2">
+        <h3 class="m-0">Hey, I’m still crafting this case study</h3>
+        <p class="m-0 flex-1">
+          I’m putting the final touches on this one ✨
+          <br />
+          but here’s a sneak peek at the designs while you wait. Grab a coffee, and don’t forget -
+          you’ll need a PIN to see the URL. Thank you, for your patience!
+        </p>
+        <p-button label="View UI designs" [rounded]="true" (onClick)="showDialog()" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Hiding this until case study is ready -->
+  <div class="hidden">
+    <div class="section-title">Project overview</div>
+    <div class="section-title">Research strategy</div>
+    <div class="section-title">User interviews</div>
+    <div class="section-title">Information architecture</div>
+    <div class="section-title">Low fidelity prototype</div>
+    <div class="section-title">High fidelity prototype</div>
+  </div>
 </div>
+
+<!-- Dialog component  -->
+<p-dialog
+  header="Preview UI designs"
+  [modal]="true"
+  [(visible)]="visible"
+  [draggable]="false"
+  (onHide)="modalHide()"
+  [style]="{ width: '25rem' }">
+  @if (!isPasswordCorrect) {
+  <div class="flex flex-column gap-3">
+    <label for="designPin">Please enter the PIN:</label>
+    <p-inputOtp
+      [(ngModel)]="passwordInput"
+      [mask]="true"
+      inputId="designPin"
+      (keydown.enter)="checkPassword()" />
+    <p-button label="Show me the URL" [rounded]="true" (onClick)="checkPassword()" />
+  </div>
+  } @if (isPasswordCorrect) {
+  <a
+    href="https://www.figma.com/design/6CW215t18H7XXbVzth0yHZ/Portfolio---samples?node-id=0-1"
+    class="flex align-items-center gap-1"
+    target="_blank"
+    rel="noopener noreferrer">
+    Preview designs in Figma
+    <i class="ph ph-arrow-square-out icon"></i>
+  </a>
+  }
+</p-dialog>
