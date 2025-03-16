@@ -10,6 +10,14 @@
   background: linear-gradient(315deg, hsla(78, 82%, 66%, 1) 0%, hsla(79, 51%, 44%, 1) 100%);
 }
 
+.project-cover--inner {
+  >div {
+    @media screen and (max-width: 650px) {
+      margin-top: 2rem;
+    }
+  }
+}
+
 // add margin-top dynamically
 
 .project-details-container {

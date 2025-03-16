@@ -1,0 +1,59 @@
+@import "../../../scss/theme";
+@import "../../../scss/typography";
+
+// project cover background gradient
+
+.project-cover {
+  background: hsla(191, 63%, 18%, 1);
+  background: -moz-linear-gradient(315deg, hsla(191, 63%, 18%, 1) 0%, hsla(191, 64%, 10%, 1) 100%);
+  background: -webkit-linear-gradient(315deg, hsla(191, 63%, 18%, 1) 0%, hsla(191, 64%, 10%, 1) 100%);
+  background: linear-gradient(315deg, hsla(191, 63%, 18%, 1) 0%, hsla(191, 64%, 10%, 1) 100%);
+}
+
+.project-cover--inner {
+  >div {
+    @media screen and (max-width: 650px) {
+      margin-top: 2rem;
+    }
+  }
+}
+
+// add margin-top dynamically
+
+.project-details-container {
+  .temp-card {
+    border: 1px solid $border-decorative;
+  }
+}
+
+// deep angular styling
+
+:host ::ng-deep {
+  .p-button {
+    &.back-button {
+      background: rgba($color: $surface-default, $alpha: 0.3);
+      border: none;
+      &.p-button-link:not(:disabled) {
+        &:hover {
+          .p-button-label {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .p-dialog {
+    margin: 0 0.75rem;
+  }
+}
+
+::ng-deep {
+  .header-container {
+    display: none !important;
+  }
+
+  .body-container {
+    margin-top: 0 !important;
+  }
+}

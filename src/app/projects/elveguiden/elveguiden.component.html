@@ -10,12 +10,13 @@
       <div class="details-left">
         <h1 class="project-title">Revamping Elveguiden</h1>
         <h3 class="project-sub-title">
-          This case-study showcase how we improved Elveguiden beat search experience and revamping
-          UI for overall better experience
+          In this case study, I detail how we enhanced the Elveguiden app, improving the beat
+          search experience and revamping the UI for a smoother and more intuitive
+          experience, helping salmon fishing enthusiasts make the most of their time on the water.
         </h3>
       </div>
       <div class="project-img">
-        <img src="eleveguiden-project-img.png" alt="" />
+        <img src="eleveguiden-project-img.png" alt="Project image" />
       </div>
     </div>
   </div>
@@ -24,7 +25,7 @@
 <div #details class="project-details-container flex w-full justify-content-center">
   <div class="flex py-8">
     <div
-      class="temp-card flex flex-column text-center md:text-left md:flex-row gap-3 p-3 border-round-xl">
+      class="temp-card flex flex-column md:flex-row gap-3 p-3 border-round-xl">
       <img src="wip.svg" class="w-10rem h-10rem" alt="Work in progress" />
       <div class="flex flex-column gap-2">
         <h3 class="m-0">Hey, I’m still crafting this case study</h3>
@@ -34,7 +35,7 @@
           but here’s a sneak peek at the designs while you wait. Grab a coffee, and don’t forget -
           you’ll need a PIN to see the URL. Thank you, for your patience!
         </p>
-        <p-button label="View UI designs" [rounded]="true" (onClick)="showDialog()" />
+        <p-button label="View UI designs" [rounded]="true" (onClick)="showDialog()" styleClass="w-full md:w-auto" />
       </div>
     </div>
   </div>
@@ -56,19 +57,7 @@
   [modal]="true"
   [(visible)]="visible"
   [draggable]="false"
-  (onHide)="modalHide()"
   [style]="{ width: '25rem' }">
-  @if (!isPasswordCorrect) {
-  <div class="flex flex-column gap-3">
-    <label for="designPin">Please enter the PIN:</label>
-    <p-inputOtp
-      [(ngModel)]="passwordInput"
-      [mask]="true"
-      inputId="designPin"
-      (keydown.enter)="checkPassword()" />
-    <p-button label="Show me the URL" [rounded]="true" (onClick)="checkPassword()" />
-  </div>
-  } @if (isPasswordCorrect) {
   <a
     href="https://www.figma.com/design/6CW215t18H7XXbVzth0yHZ/Portfolio---samples?node-id=0-1"
     class="flex align-items-center gap-1"
@@ -77,5 +66,4 @@
     Preview designs in Figma
     <i class="ph ph-arrow-square-out icon"></i>
   </a>
-  }
 </p-dialog>

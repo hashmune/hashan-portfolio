@@ -25,10 +25,6 @@ export class ElveguidenComponent implements AfterViewInit {
   @ViewChild("details") details!: ElementRef;
 
   visible: boolean = false;
-  passwordInput!: string;
-  isPasswordCorrect: boolean = false;
-
-  private correctPassword: string = "1994";
 
   constructor(
     private renderer: Renderer2,
@@ -55,18 +51,5 @@ export class ElveguidenComponent implements AfterViewInit {
 
   showDialog() {
     this.visible = true;
-  }
-
-  checkPassword(): void {
-    this.isPasswordCorrect = this.passwordInput === this.correctPassword;
-    if (!this.isPasswordCorrect) {
-      alert("Incorrect password. Please try again.");
-      this.passwordInput = "";
-    }
-  }
-
-  modalHide() {
-    this.passwordInput = "";
-    this.isPasswordCorrect = false;
   }
 }

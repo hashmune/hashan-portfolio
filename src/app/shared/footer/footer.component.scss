@@ -51,12 +51,15 @@
         li {
           list-style: none;
           a {
+            text-decoration: none;
+
             &:hover {
               text-decoration: none;
             }
 
             i {
               font-size: 1.5rem;
+              
               &:hover {
                 color: $default-hover;
                 text-decoration: none;
